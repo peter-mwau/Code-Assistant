@@ -16,7 +16,7 @@ def assist(request):
 				fn_index=0
             )
         print(result)
-        # form = EmotionForm(request.POST or None)
+        formoutput = AssistChat(initial={'userInput': userInput, 'output': result})
         # r = Records_log(Query=userInput, Emotion=output)
         # r.save()
         return render(request, 'home.html', {'form': formoutput})
