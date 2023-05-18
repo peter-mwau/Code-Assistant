@@ -9,7 +9,7 @@ def assist(request):
     form = AssistChat(request.POST or None)
     if form.is_valid():
         userInput = form.cleaned_data.get("userInput")
-        client = Client("https://mosaicml-mpt-7b-chat--lst2j.hf.space/")
+        client = Client("https://mosaicml-mpt-7b-chat--4nw7r.hf.space/")
         result = client.predict(
 				userInput,	# str representing string value in 'Chat Message Box' Textbox component
 				"null",	# str representing filepath to JSON file in 'parameter_3' Chatbot component
